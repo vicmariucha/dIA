@@ -1,0 +1,162 @@
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 20px;
+  min-height: calc(100vh - 40px);
+  margin: 20px 0;
+  border-radius: 20px;
+  max-width: 400px;
+  min-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.foto-perfil-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foto-perfil {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* Transforma a foto em um círculo */
+  object-fit: cover;
+  border: 3px solid #6a0dad;
+}
+
+.input-foto {
+  margin-top: 10px;
+}
+
+/* Inputs */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #6a0dad;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #6a0dad;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #6a0dad;
+  background-color: #f9f7ff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #8b2bbf;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row .form-group.small-input {
+  flex: 1;
+}
+
+.form-row .form-group.small-input input {
+  padding: 10px; /* Diminui a altura */
+  font-size: 14px; /* Fonte menor */
+}
+
+/* Botões */
+.btn {
+  padding: 10px 20px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-back {
+  padding: 10px 20px;
+  background: none;
+  color: #6a0dad;
+  border: 2px solid #6a0dad;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #8b2bbf;
+}
+
+.btn-back:hover {
+  background-color: #6a0dad;
+  color: white;
+}
+
+/* Botões lado a lado */
+.button-row {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 20px;
+}
+
+.btn,
+.btn-back {
+  flex: 1; /* Faz com que os botões tenham o mesmo tamanho */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .perfil-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .form-group.small-input {
+    width: 100%;
+  }
+
+  .foto-perfil {
+    width: 70px; /* Reduz o tamanho da foto para dispositivos menores */
+    height: 70px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn,
+  .btn-back {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

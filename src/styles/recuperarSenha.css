@@ -1,0 +1,112 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(#6a0dad, #008080); /* Gradiente de fundo */
+    color: #6a0dad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .recuperar-senha-container {
+    background: #fff; /* Fundo branco do container */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra do container */
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #6a0dad; /* Cor do título */
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    color: #008080; /* Mensagem de sucesso */
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: #dc3545; /* Mensagem de erro */
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .recuperar-senha-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .recuperar-senha-form label {
+    display: block;
+    font-weight: bold;
+    color: #6a0dad;
+    margin-bottom: 5px;
+  }
+  
+  .recuperar-senha-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #6a0dad;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #6a0dad;
+    background-color: #f9f7ff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .recuperar-senha-form input:focus {
+    outline: none;
+    border-color: #8b2bbf;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #8b2bbf;
+    color: white;
+    box-shadow: 0 6px 15px rgba(139, 43, 191, 0.5);
+  }
+  
+  .btn-back {
+    margin-top: 10px;
+    background: none;
+    color: #6a0dad;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration: none;
+
+  }
+  
+  .btn-back:hover {
+    color: white;
+    background-color: #008080;
+    text-decoration: none;
+
+  }
+  

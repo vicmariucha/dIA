@@ -1,0 +1,233 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+  
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#6a0dad, #008080);
+    overflow-y: auto;
+}
+
+
+body {
+    background: linear-gradient(#6a0dad, #008080); /* Gradiente cobrindo toda a página */
+    color: #6a0dad;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0; /* Espaçamento no topo e base */
+    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-y: scroll;
+
+}
+  
+/* Container principal */
+.registro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    min-width: 500px;
+    padding: 30px;
+    overflow: visible; /* Permite o crescimento do conteúdo */
+    margin: 20px 0; /* Margens proporcionais no topo e base */
+    min-height: auto;
+    box-sizing: border-box;
+
+}
+  
+/* Títulos e mensagens */
+h1 {
+    font-size: 28px;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+  
+.error {
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+  
+.success {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+  
+/* Formulário */
+.registro-form {
+    width: 100%;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #6a0dad;
+    margin-bottom: 5px;
+}
+  
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #6a0dad;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #6a0dad;
+    background-color: #f9f7ff;
+    transition: all 0.3s ease-in-out;
+}
+  
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #8b2bbf;
+}
+  
+/* Campos lado a lado */
+.double-input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.double-input-group .form-group {
+    flex: 1;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    width: auto;
+    height: auto;
+}
+  
+/* Botões */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+  
+.btn:hover {
+    background-color: #8b2bbf;
+    box-shadow: 0 6px 15px rgba(139, 43, 191, 0.5);
+}
+  
+.btn-back {
+    background: none;
+    color: #6a0dad;
+    font-size: 16px;
+    border: 2px solid #6a0dad;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+  
+.btn-back:hover {
+    background: #6a0dad;
+    color: white;
+}
+  
+.form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #6a0dad;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+
+/* Estilização responsiva */
+@media screen and (max-width: 768px) {
+    .registro-container {
+        width: 90%;
+        padding: 20px;
+    }
+  
+    .double-input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2020", // Suporte a recursos mais recentes
+    "lib": ["esnext"], // Bibliotecas modernas do ECMAScript
+    "strict": true, // Mantenha verificações rigorosas
+    "esModuleInterop": true, // Importação compatível com CommonJS
+    "skipLibCheck": true, // Ignorar verificação de tipos em bibliotecas externas
+    "noImplicitReturns": true, // Evitar retornos implícitos
+    "noUnusedLocals": true, // Manter o código limpo
+    "sourceMap": true, // Gerar mapas de origem
+    "outDir": "lib", // Diretório de saída para arquivos compilados
+    "resolveJsonModule": true, // Permitir importação de arquivos JSON
+    "moduleResolution": "node" // Estratégia de resolução para módulos Node.js
+  },
+  "compileOnSave": true,
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

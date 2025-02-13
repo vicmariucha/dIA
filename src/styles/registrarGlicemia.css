@@ -1,0 +1,204 @@
+/* Estilo Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #6a0dad, #00bfff);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container Principal */
+.registrar-glicemia-container {
+  max-width: 900px; /* Aumenta a largura máxima */
+  width: 70%; /* Ajusta a largura proporcional à tela */
+  min-width: 500px; /* Mantém um mínimo para dispositivos grandes */
+  margin: 40px auto; /* Centraliza com margem superior e inferior */
+  padding: 30px; /* Margem interna maior */
+  text-align: center;
+  background-color: white;
+  border-radius: 20px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens */
+}
+
+/* Títulos */
+h1 {
+  font-size: 28px;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Mensagens de Erro e Sucesso */
+.error, .success {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/* Formulário */
+.registrar-glicemia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; /* Preenche a largura do container */
+}
+
+/* Grupos de Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Mantém a largura completa */
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6a0dad;
+  margin-bottom: 5px;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #6a0dad;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #6a0dad;
+  background-color: #f9f7ff;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #8b2bbf;
+  background-color: #f3ebff;
+}
+
+/* Estilo para o Campo de Data e Hora */
+.form-group.date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
+}
+
+input[type="datetime-local"] {
+  appearance: none; /* Remove estilos padrão */
+  -webkit-appearance: none; /* Para navegadores baseados em WebKit */
+  width: calc(100% - 150px); /* Reduz a largura para acomodar o botão */
+  margin-bottom: 10px;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  color: #6a0dad;
+  cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+  color: #8b2bbf;
+}
+
+.btn-small {
+  align-self: flex-start; /* Alinha o botão à esquerda */
+  font-size: 14px;
+  padding: 8px 15px;
+  background-color: #6a0dad;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-small:hover {
+  background-color: #8b2bbf;
+}
+
+/* Botões */
+.btn, .btn-back {
+  width: auto; /* Ajusta a largura ao tamanho do conteúdo */
+  padding: 10px 20px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+  margin: 10px auto; /* Centraliza os botões */
+}
+
+.btn:hover, .btn-back:hover {
+  background-color: #8b2bbf;
+}
+
+.btn-back {
+  background-color: transparent;
+  color: #6a0dad;
+  border: 2px solid #6a0dad;
+}
+
+.btn-back:hover {
+  background-color: #8b2bbf;
+  color: white;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+  .registrar-glicemia-container {
+    width: 80%; /* Ajusta a largura para telas médias */
+    min-width: 500px; /* Mantém largura mínima */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registrar-glicemia-container {
+    width: 95%; /* Usa quase toda a largura em dispositivos menores */
+    min-width: unset; /* Remove restrições de largura mínima */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input, textarea, select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn, .btn-small, .btn-back {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
