@@ -1,0 +1,143 @@
+/* Container principal */
+.medico-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    max-height: 300vh;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+  }
+  
+  /* Header */
+  .medico-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .medico-header h1 {
+    font-size: 24px;
+    color: #6a0dad;
+  }
+  
+  .btn-perfil {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .btn-perfil:hover {
+    background-color: #8b2bbf;
+  }
+  
+  /* Pacientes */
+  .pacientes-section h2 {
+    font-size: 20px;
+    color: #6a0dad;
+  }
+  
+  .pacientes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .paciente-card {
+    background-color: #fff;
+    border: 2px solid #6a0dad;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .paciente-card:hover {
+    transform: scale(1.05);
+    border-color: #8b2bbf;
+  }
+  
+  .paciente-card.selected {
+    background-color: #e9e3f6;
+    border-color: #8b2bbf;
+  }
+  
+  /* Detalhes do paciente */
+  .paciente-detalhes h2 {
+    font-size: 20px;
+    color: #6a0dad;
+  }
+  
+  .solicitacoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .btn-solicitar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-solicitar:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botão voltar */
+  .btn-voltar {
+    background-color: transparent;
+    color: #6a0dad;
+    border: 2px solid #6a0dad;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #6a0dad;
+    color: white;
+  }
+  
+
+  .associar-pacientes-section {
+    margin-bottom: 20px;
+  }
+  
+  .associar-pacientes-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #6a0dad;
+    border-radius: 8px;
+  }
+  
+  .associar-pacientes-section .btn-associar {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .associar-pacientes-section .btn-associar:hover {
+    background-color: #8b2bbf;
+  }
+  
+  .associar-pacientes-section .status {
+    margin-top: 10px;
+    color: #008080;
+  }
+  

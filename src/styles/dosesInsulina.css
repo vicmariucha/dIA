@@ -1,0 +1,189 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(#6A0DAD, #008080);
+    color: #6A0DAD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+    overflow-x: hidden;
+  }
+  
+  /* Container principal */
+  .doses-insulina-container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 60%;
+    min-width: 600px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Títulos */
+  .doses-insulina-container h1 {
+    font-size: 28px;
+    color: #6A0DAD;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulário */
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #6A0DAD;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #6A0DAD;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #6A0DAD;
+    background-color: #F9F7FF;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #8B2BBF;
+    background-color: #F3EBFF;
+  }
+  
+  /* Switch para "Mesma Dose" */
+  .switch-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }  
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #6a0dad;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Botões */
+  .btn-add,
+  .btn-back,
+  .btn-edit,
+  .btn-save {
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+  }
+  
+  .btn-add:hover,
+  .btn-back:hover,
+  .btn-edit:hover,
+  .btn-save:hover {
+    background-color: #8B2BBF;
+    box-shadow: 0 6px 15px rgba(139, 43, 191, 0.5);
+  }
+  
+  .btn-back {
+    background-color: transparent;
+    color: #6A0DAD;
+    border: 2px solid #6A0DAD;
+  }
+  
+  .btn-back:hover {
+    background-color: #6A0DAD;
+    color: white;
+  }
+  
+  .btn-edit {
+    padding: 8px 16px;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 768px) {
+    .doses-insulina-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .btn-add,
+    .btn-back {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

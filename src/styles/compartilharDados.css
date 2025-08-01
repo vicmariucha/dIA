@@ -1,0 +1,125 @@
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(#6a0dad, #008080);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compartilhar-dados-container {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6a0dad;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #008080;
+  margin-bottom: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #6a0dad;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #6a0dad;
+  background: #f9f7ff;
+  transition: border-color 0.3s;
+}
+
+.select:focus {
+  border-color: #8b2bbf;
+}
+
+.personalizado-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.small-input,
+.small-select {
+  flex: 1;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn {
+  background-color: #008080;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #AFE0E0;
+  color: #008080;
+}
+
+.btn-back {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.btn-back:hover {
+  background-color: #8b2bbf;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
