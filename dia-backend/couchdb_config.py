@@ -1,14 +1,22 @@
 import couchdb
+import os
+from dotenv import load_dotenv
 
-COUCHDB_USER = "Argoze"
-COUCHDB_PASSWORD = "252829"
-COUCHDB_URL = f"http://{COUCHDB_USER}:{COUCHDB_PASSWORD}@localhost:5984/"
-DB_NAME = "usuarios"
+load_dotenv()  # Carrega as variáveis do .env
 
 def get_db():
-    server = couchdb.Server(COUCHDB_URL)
-    if DB_NAME in server:
-        db = server[DB_NAME]
+    user = os.getenv("COUCHDB_USER")
+    password = os.getenv("COUCHDB_PASSWORD")
+    host = os.getenv("COUCHDB_HOST", "localhost")
+    port = os.getenv("COUCHDB_PORT", "5984")
+    db_name = os.getenv("COUCHDB_DB", "dados_app")
+
+    couch = couchdb.Server(f"http://{user}:{password}@{host}:{port}/")
+
+    # Cria o banco se ele não existir
+    if db_name not in couch:
+        db = couch.create(db_name)
     else:
-        db = server.create(DB_NAME)
+        db = couch[db_name]
+
     return db
